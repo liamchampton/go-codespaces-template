@@ -1,16 +1,17 @@
-/*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-*/
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"log"
+	"net/http"
+)
 
 func main() {
-	app := fiber.New()
+	fs := http.FileServer(http.Dir("static"))
+	http.Handle("/", fs)
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World!")
-	})
-
-	app.Listen(":3000")
+	log.Println("Listening on :3000...")
+	err := http.ListenAndServe(":3000", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
