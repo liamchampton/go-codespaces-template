@@ -1,6 +1,8 @@
 # go-codespaces-template
 This is a template that is designed to be used with GitHub Codespaces to get you up and running with your Go server projects in a matter of minutes.
 
+![Environment setup complete](./assets/env-setup-cst.png)
+
 ## Getting started
 
 To get started, first you need to decide if you want to `fork` or `template` this repository. In simple terms, with a fork you will have a copy of this repository in your own GitHub account and you can make changes to it as you wish, as well as the ability to pull any updates made from this top level template repository. With a template, you will have a copy of this repository in your own GitHub account as it stands in its current form. You will be able to make changes to the code and make the project your own, but you will not be able to push those changes back to this template repository.
