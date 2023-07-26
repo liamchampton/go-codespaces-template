@@ -9,7 +9,7 @@
 *.dylib
 
 # Example build binary file
-go-cli-template
+go-codespaces-template
 
 # Test binary, built with `go test -c`
 *.test

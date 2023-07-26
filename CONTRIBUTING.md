@@ -25,12 +25,12 @@ Please esure that any changes you make work seamlessly within a Codespaces envir
 
 To contribute to this project, follow these steps:
 
-1. Fork the repository on GitHub.
+1. FORK the repository on GitHub.
 2. Open your forked repository in Codespaces or clone your forked repository to your local machine but a local setup is required for this.
-3. Make the necessary changes.
+3. Make the necessary changes on a new branch.
 4. Commit your changes with a descriptive commit message.
 5. Push your branch to your forked repository.
-6. Open a pull request against the `main` branch of this repository.
+6. Open a pull request against the `main` branch of this template repository.
 
 ## Code Guidelines
 
@@ -58,4 +58,4 @@ Please adhere to these guidelines:
 
 ## License
 
-By contributing to this project, you agree to license your contributions under the [LICENSE](https://github.com/liamchampton/go-cli-template/blob/main/LICENSE) of the repository.
+By contributing to this project, you agree to license your contributions under the [LICENSE](https://github.com/liamchampton/go-codespaces-template/blob/main/LICENSE) of the repository.

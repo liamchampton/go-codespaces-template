@@ -1,3 +1,3 @@
-module go-codespace-template
+module go-codespaces-template
 
 go 1.20
