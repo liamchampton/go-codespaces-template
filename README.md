@@ -1,4 +1,4 @@
-# go-cli-template
+# go-codespaces-template
 This is a template that is designed to be used with GitHub Codespaces to get you up and running with your Go server projects in a matter of minutes.
 
 ## Getting started
