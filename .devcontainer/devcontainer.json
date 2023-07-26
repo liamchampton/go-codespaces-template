@@ -2,35 +2,36 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/go
 {
 	"name": "Go",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/go:1.20",
-	"features": {
-		"ghcr.io/devcontainers/features/go:1": {}
+	"hostRequirements": {
+		"cpus": 2
 	},
-
 	"remoteEnv": {
 		"GOBIN": "/go/bin/"
-	 },
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
+	},
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "go mod tidy",
 	"postCreateCommand": "export $PATH=$PATH:GOBIN",
+	"postAttachCommand": {
+		"server": "go run main.go"
+	},
+	"portsAttributes": {
+		"3000": {
+			"label": "Application",
+			"onAutoForward": "openPreview"
+		}
+	},
 	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				"static/index.html"
+			]
+		},
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot"
 			]
 		}
-	}
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	},
+	"forwardPorts": [3000]
 }
